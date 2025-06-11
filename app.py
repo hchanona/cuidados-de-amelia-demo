@@ -330,10 +330,3 @@ historico_extraccion = data[data["tipo"] == "extracción de leche"].copy()
 extraccion_por_dia = historico_extraccion.groupby("fecha")["cantidad_extraida_de_leche"].sum().sort_index()
 extraccion_media_movil = extraccion_por_dia.rolling(window=7, min_periods=7).mean()
 graficar_media_movil(extraccion_media_movil, "Extracción de leche (ml)", '#f4c2c2', ylim_max=220)
-
-
-# === Gráfico de porcentaje de leche materna ===
-historico_tomas = data[data["tipo"] == "toma de leche"].copy()
-porcentaje_materna_por_dia = historico_tomas.groupby("fecha").apply(calcular_porcentaje_materna).sort_index()
-porcentaje_materna_media_movil = porcentaje_materna_por_dia.rolling(window=7, min_periods=7).mean()
-graficar_media_movil(porcentaje_materna_media_movil, "Porcentaje de leche materna", '#e3a6b4', ylim_max=100)
