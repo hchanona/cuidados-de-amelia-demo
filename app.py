@@ -135,11 +135,11 @@ data["tipo_leche"] = data["tipo_leche"].astype(str).str.strip().str.lower()
 
 # Genero una lista con los nombres de los jpg de las fotos
 fotos_amelia = [
-    "foto_amor1.jpg",
-    "foto_amor2.jpg",
-    "foto_amor3.jpg",
-    "foto_amor4.jpg",
-    "foto_amor5.jpg"
+    "Fotos/foto_amor1.jpg",
+    "Fotos/foto_amor2.jpg",
+    "Fotos/foto_amor3.jpg",
+    "Fotos/foto_amor4.jpg",
+    "Fotos/foto_amor5.jpg"
 ]
 
 # Elijo, de manera aleatoria, el nombre de una foto
